@@ -1,18 +1,32 @@
 /* Your custom fonts here */
 
-/* Example
-
 @font-face {
-    font-family: 'CustomFont';
-    src: url('../fonts/Custom-Font.eot');
-    src: url('../fonts/Custom-Font.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/Custom-Font.woff') format('woff'),
-         url('../fonts/Custom-Font.svg#custom_font') format('svg');
+    font-family: 'OpenSans';
+    src: url('../fonts/opensans.woff') format('woff'),
+         url('../fonts/opensans.woff2') format('woff2');
     font-weight: 400;       // For normal width. It could has another value
     font-style: normal;     // Also could has another value
     }
 
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../fonts/opensansbold.woff.woff') format('woff'),
+         url('../fonts/opensansbold.woff.woff2') format('woff2');
+    font-weight: 800;       // For normal width. It could has another value
+    font-style: normal;     // Also could has another value
+    }
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../fonts/opensanslight.woff.woff.woff') format('woff'),
+         url('../fonts/opensanslight.woff.woff.woff2') format('woff2');
+    font-weight: 100;       // For normal width. It could has another value
+    font-style: normal;     // Also could has another value
+    }
 
 // Var for using custom font
-@CustomFont: 'CustomFont', Helvetica, Arial, sans-serif;
-*/
+@CustomFont: 'OpenSans', Helvetica, Arial, sans-serif;
+
+body {
+  font-family: @CustomFont;
+}
