@@ -1,0 +1,20 @@
+mixin input__control(data)
+  input.input__control(
+    type=data.type
+    placeholder=data.placeholder
+    name=data.name
+    value=data.value
+    required=data.required
+    disabled=data.disabled
+    id=data.id
+  )
+
+mixin input(data)
+  label.input(class=data.mod)
+    span.input__label=data.label
+    if data.iconName
+      span.input__wrap
+        +input__control(data)
+        != pugHelpers.Icon.call(locals, { iconName: data.iconName, className: 'input__icon', iconWidth: 20, iconHeight: 20})
+    else
+      +input__control(data)
