@@ -1,2 +1,23 @@
 // File for less-vars.
-// For example: main colors, paddings and so on.
+// COLOR
+@blueDark: #283645;
+@pink: #d22856;
+@white: #fff;
+@green: #d22856;
+@greenLight: #2aab6d;
+@greenDark: #1c9b5e;
+@grey: #e5e5e5;
+@greyDark: #b5b9be;
+// WIDTH
+@tablet: 768px;
+@desktop: 1200px;
+@mobile-only: 767px;
+
+
+@tablet-widths: ~"(min-width:" @tablet ~")";
+@desktop-widths: ~"(min-width:" @desktop ~")";
+@mobile-width-only: ~"(max-width:" @mobile-only ~")";
+@retina: ~"(min-resolution: 144dpi), (min-resolution: 1.5dppx)";
+
+@primaryColor: @blueDark;
+@secondaryColor: @pink;
