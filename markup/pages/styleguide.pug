@@ -2,7 +2,7 @@ doctype html
 html(class="no-js", lang="ru")
 
     include ../components/head/head.pug
-    include ../components/example/example.pug
+    include ../components/checkbox/checkbox.pug
     include ../components/footer/footer.pug
 
     head
@@ -14,3 +14,15 @@ html(class="no-js", lang="ru")
 
             //- Include your components here
             h1 Styleguide
+            +checkbox({
+              label: "Сделал селфи с акулой",
+              name: "selfie",
+              value: "selfie with shark",
+              disabled: true,
+              checked: true
+            })
+            +checkbox({
+              label: 'Обгорел на пляже',
+              name: 'selfi',
+              checked: true,
+            })
