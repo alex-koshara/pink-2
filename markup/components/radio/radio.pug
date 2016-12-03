@@ -1,0 +1,10 @@
+mixin radio(data)
+  label.radio
+    input.radio__input(
+      type="radio"
+      name=data.name
+      value=data.value
+      checked=data.checked
+      disabled=data.disabled
+    )
+    span.radio__text=data.label
