@@ -6,6 +6,8 @@ html(class="no-js", lang="ru")
     include ../components/radio/radio.pug
     include ../components/footer/footer.pug
     include ../components/btn/btn.pug
+    include ../components/textarea/textarea.pug
+
 
     head
         +head({title: 'Styleguide'})
@@ -79,3 +81,9 @@ html(class="no-js", lang="ru")
                 mod: "btn--round  btn--white",
                 href: "#"
               })
+
+            +textarea({
+              value: "textarea",
+              placeholder: "Можно прям в красках",
+              name: "textarea"
+            })
