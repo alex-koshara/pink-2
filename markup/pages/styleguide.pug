@@ -5,6 +5,7 @@ html(class="no-js", lang="ru")
     include ../components/checkbox/checkbox.pug
     include ../components/radio/radio.pug
     include ../components/footer/footer.pug
+    include ../components/btn/btn.pug
 
     head
         +head({title: 'Styleguide'})
@@ -42,3 +43,39 @@ html(class="no-js", lang="ru")
               name: "product",
               disabled: true
             })
+
+            +btn({
+              type: "submit",
+              text: "Отправить форму",
+              disabled: true
+            })
+
+            .div
+
+            +btn({
+              text: "Отправить форму",
+              type: "button"
+            })
+
+            .div
+
+            +btn({
+              text: "Отмена",
+              mod: "btn--round  btn--grey"
+            })
+
+            .div
+
+            +btn({
+              text: "Запостить",
+              mod: "btn--round  btn--pink",
+              href: "#"
+            })
+
+            .div
+            .div--bg
+              +btn({
+                text: "Скачать приложение",
+                mod: "btn--round  btn--white",
+                href: "#"
+              })
