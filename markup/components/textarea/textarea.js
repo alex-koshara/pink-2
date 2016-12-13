@@ -1,6 +1,6 @@
 var textarea = document.querySelector(".textarea");
 
-textarea.addEventListener("input", textareaInput)
+textarea.addEventListener("keyup", textareaInput)
 
 function textareaInput() {
   if(this.scrollTop > 0) {
