@@ -1,0 +1,14 @@
+mixin btn(data)
+    if data.href
+      a.btn(
+        href=data.href
+        class=data.mod,
+        disabled=data.disabled
+      )=data.text
+    else
+      button.btn(
+        class=data.mod
+        type=data.type ? data.type : "submit"
+        value=data.value
+        disabled=data.disabled
+      )=data.text

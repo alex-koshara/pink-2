@@ -1,0 +1,84 @@
+.btn {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px;
+
+  display: inline-block;
+
+  min-width: 280px;
+  padding: 17px;
+
+  cursor: pointer;
+  transition: .2s all linear;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  color: @white;
+  border: none;
+  border-radius: 1px;
+  outline: none;
+  background: @green;
+  box-shadow: none;
+  @media @tablet-widths {
+    min-width: 300px;
+  }
+  &:hover {
+    background: @greenDark;
+  }
+  &:active {
+    color: @white-30;
+    background: @greenDark;
+  }
+  &:disabled {
+    background: @grey;
+  }
+  &.btn--round {
+    line-height: 18px;
+
+    min-width: 280px;
+    padding: 16px;
+
+    text-transform: none;
+
+    border-radius: 50px;
+  }
+  &.btn--pink {
+    color: @pink;
+    border: 2px solid @pink;
+    background: none;
+    &:hover {
+      color: @white;
+      background: @pink;
+    }
+    &:active {
+      color: @white-30;
+    }
+  }
+  &.btn--white {
+    color: @white;
+    border: 2px solid @white;
+    background: none;
+    &:hover {
+      background: @white;
+      color: @pink;
+    }
+    &:active {
+      color: @pink-30;
+    }
+  }
+  &.btn--grey {
+    opacity: .2;
+    color: @blueLight;
+    border: 2px solid @blueLight;
+    background: none;
+    &:hover {
+      opacity: 1;
+      color: @blueLight-30;
+    }
+    &:active {
+      color: @white-30;
+      background: @blueLight;
+    }
+  }
+}
