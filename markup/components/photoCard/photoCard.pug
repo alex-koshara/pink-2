@@ -1,0 +1,15 @@
+mixin photoCard(data)
+  section.photo-card
+    each photo in photoCard
+      a.photo-card__full-img(href="#")
+        picture
+          source(media="(min-width:1200px)" srcset=photo.img + "-desktop@1x.jpg, " + photo.img + "-desktop@2x.jpg 2x")
+          source(media="(min-width:768px)" srcset=photo.img + "-tablet@1x.jpg, " + photo.img + "-tablet@2x.jpg 2x")
+          img.photo-card__img(src=photo.img + "-mobile@1x.jpg" srcset=photo.img + "-mobile@2x.jpg 2x" alt="Photo card" width="280" height=180)
+      .photo-card__wrap
+        span.photo-card__user-name=photo.userName + " "
+        span.photo-card__publication="(" + photo.timePub + ")"
+        p.photo-card__desc=photo.desc
+        .photo-card__like-block
+          != pugHelpers.Icon.call(locals, { iconName: "icon-heart", className: 'input__icon', iconWidth: 13, iconHeight: 12})
+          span.photo-card__like="нравится: " + photo.like

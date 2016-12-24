@@ -7,6 +7,7 @@ html(class="no-js", lang="ru")
     include ../components/footer/footer.pug
     include ../components/btn/btn.pug
     include ../components/textarea/textarea.pug
+    include ../components/photoCard/photoCard.pug
 
 
     head
@@ -88,4 +89,8 @@ html(class="no-js", lang="ru")
               name: "textarea"
             })
 
+            .container
+              +photoCard()
+
             script(src='%=static=%js/main%=hash=%%=min=%.js')
+
