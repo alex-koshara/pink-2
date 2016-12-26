@@ -1,0 +1,5 @@
+mixin socialIcon(data)
+    section.social
+      each icon in icons
+        a.social__link(href=icon.link)
+          != pugHelpers.Icon.call(locals, { iconName: "icon-" + icon.icon, className: 'social__icon', iconWidth: 15, iconHeight: 19})
