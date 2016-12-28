@@ -89,6 +89,19 @@ html(class="no-js", lang="ru")
               name: "textarea"
             })
 
-            +socialIcon()
+            +socialIcon({
+              link: "facebook.com",
+              icon: "facebook"
+            })
+
+            +socialIcon({
+              link: "twitter.com",
+              icon: "twitter"
+            })
+
+            +socialIcon({
+              link: "youtube.com",
+              icon: "youtube"
+            })
 
             script(src='%=static=%js/main%=hash=%%=min=%.js')
