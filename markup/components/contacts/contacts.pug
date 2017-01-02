@@ -1,13 +1,14 @@
 mixin contacts(data)
-  section.contacts
-    .contacts__description=contacts.desc
-    .contacts__data
-      .contacts__group
-        span.contacts__text="Звоните:"
-        a.contacts__link(href="tel:" + contacts.number)=contacts.number
-      .contacts__group
-        span.contacts__text="Пишите:"
-        a.contacts__link(href="mailto:" + contacts.email)=contacts.email
-      .contacts__group
-        span.contacts__text="Приезжайте в гости:"
-        a.contacts__link()=contacts.address
+  .container
+    section.contacts
+      .contacts__description=contacts.desc
+      .contacts__data
+        .contacts__group
+          span.contacts__text="Звоните:"
+          a.contacts__link(href="tel:" + contacts.number)=contacts.number
+        .contacts__group.contacts__group--email
+          span.contacts__text="Пишите:"
+          a.contacts__link(href="mailto:" + contacts.email)=contacts.email
+        .contacts__group
+          span.contacts__text="Приезжайте в гости:"
+          a.contacts__link.contacts__link--address()=contacts.address
