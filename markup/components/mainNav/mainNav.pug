@@ -1,0 +1,10 @@
+mixin mainNav(data)
+    nav.main-nav.main-nav--no-js
+      .wrapper
+        .main-nav__group
+          a.logo(href= (data.link=="index.html") ? false : "index.html")
+            img.logo__img(alt="Pink")
+          button.hamburger
+        .main-nav__group.main-nav__group--links
+          each  link in mainNav
+            a.main-nav__link(href=link.link, class=(data.link == link.link ? "main-nav__link--active" : false))= link.text

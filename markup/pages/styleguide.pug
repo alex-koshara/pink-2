@@ -8,7 +8,7 @@ html(class="no-js", lang="ru")
     include ../components/footer/footer.pug
     include ../components/btn/btn.pug
     include ../components/textarea/textarea.pug
-
+    include ../components/mainNav/mainNav.pug
 
     head
 
@@ -20,92 +20,81 @@ html(class="no-js", lang="ru")
         section.page__wrapper
 
             //- Include your components here
-            h1 Styleguide
-
-            +checkbox({
-              label: "Сделал селфи с акулой",
-              name: "selfie",
-              value: "selfie with shark",
-              disabled: true,
-              checked: true
+            +mainNav({
+              link: "index.html"
             })
 
-            +checkbox({
-              label: "Обгорел на пляже",
-              name: "selfi",
-              checked: true,
-            })
+            .container
 
-            +radio({
-              label: "Pink для iOS",
-              name: "product",
-              value: "iOS",
-              checked: true
-            })
+              h1 Styleguide
 
-            +radio({
-              label: "Pink на Android",
-              name: "product",
-              disabled: true
-            })
+              +checkbox({
+                label: "Сделал селфи с акулой",
+                name: "selfie",
+                value: "selfie with shark",
+                disabled: true,
+                checked: true
+              })
 
-            +input({
-              type: "tel",
-              label: "Номерок телефончика",
-              placeholder: "Номер, пожалуйста",
-              required: true,
-              id: "last-name",
-              iconName: "phone",
-              mod: "input--down"
-            })
+              +checkbox({
+                label: "Обгорел на пляже",
+                name: "selfi",
+                checked: true,
+              })
 
-            +input({
-              type: "email",
-              label: "Фамилия:",
-              labelMobile: "Фамилия",
-              placeholder: "Укажите фамилию"
-            })
+              +radio({
+                label: "Pink для iOS",
+                name: "product",
+                value: "iOS",
+                checked: true
+              })
 
-            +btn({
-              type: "submit",
-              text: "Отправить форму",
-              disabled: true
-            })
+              +radio({
+                label: "Pink на Android",
+                name: "product",
+                disabled: true
+              })
 
-            .styleguide__delimeter
-
-            +btn({
-              text: "Отправить форму",
-              type: "button"
-            })
-
-            .styleguide__delimeter
-
-            +btn({
-              text: "Отмена",
-              mod: "btn--round  btn--grey"
-            })
-
-            .styleguide__delimeter
-
-            +btn({
-              text: "Запостить",
-              mod: "btn--round  btn--pink",
-              href: "#"
-            })
-
-            .styleguide__delimeter
-            .styleguide__blue-bg
               +btn({
-                text: "Скачать приложение",
-                mod: "btn--round  btn--white",
+                type: "submit",
+                text: "Отправить форму",
+                disabled: true
+              })
+
+              .styleguide__delimeter
+
+              +btn({
+                text: "Отправить форму",
+                type: "button"
+              })
+
+              .styleguide__delimeter
+
+              +btn({
+                text: "Отмена",
+                mod: "btn--round  btn--grey"
+              })
+
+              .styleguide__delimeter
+
+              +btn({
+                text: "Запостить",
+                mod: "btn--round  btn--pink",
                 href: "#"
               })
 
-            +textarea({
-              value: "textarea",
-              placeholder: "Можно прям в красках",
-              name: "textarea"
-            })
+              .styleguide__delimeter
+              .styleguide__blue-bg
+                +btn({
+                  text: "Скачать приложение",
+                  mod: "btn--round  btn--white",
+                  href: "#"
+                })
+
+              +textarea({
+                value: "textarea",
+                placeholder: "Можно прям в красках",
+                name: "textarea"
+              })
 
             script(src='%=static=%js/main%=hash=%%=min=%.js')

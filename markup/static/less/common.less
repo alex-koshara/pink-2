@@ -10,10 +10,6 @@ html, body {
     height: 100%;
 }
 
-.styleguide {
-  padding: 10px 30px 0;
-}
-
 .page {
     font-family: @MainFont;
 }
@@ -31,6 +27,7 @@ html, body {
     height: 50px;
 }
 
+
 .styleguide__delimeter {
   height: 30px;
 }
@@ -38,4 +35,16 @@ html, body {
 .styleguide__blue-bg {
   background: @primaryColor;
   padding: 5px;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: auto;
+  @media @tablet-widths {
+    padding: 0 40px;
+  }
+  @media @desktop-widths {
+    padding: 0 130px;
+  }
 }
