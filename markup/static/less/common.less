@@ -39,3 +39,15 @@ html, body {
   background: @primaryColor;
   padding: 5px;
 }
+
+.container {
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: auto;
+  @media @tablet-widths {
+    padding: 0 40px;
+  }
+  @media @desktop-widths {
+    padding: 0 130px;
+  }
+}
