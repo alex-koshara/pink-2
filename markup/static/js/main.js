@@ -5,3 +5,4 @@
  */
 
 require("components/textarea/textarea");
+require("components/map/map");
