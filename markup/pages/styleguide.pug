@@ -8,6 +8,7 @@ html(class="no-js", lang="ru")
     include ../components/footer/footer.pug
     include ../components/btn/btn.pug
     include ../components/textarea/textarea.pug
+    include ../components/copyright/copyright.pug
 
 
     head
@@ -107,5 +108,7 @@ html(class="no-js", lang="ru")
               placeholder: "Можно прям в красках",
               name: "textarea"
             })
+
+            +copyright()
 
             script(src='%=static=%js/main%=hash=%%=min=%.js')
