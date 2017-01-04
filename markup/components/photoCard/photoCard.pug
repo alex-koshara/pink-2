@@ -1,12 +1,10 @@
 mixin photoCard(data)
-  section.photo-card
-    each photo in photoCard
+  section.photo-card(class=data.active)
 
-
-      - var mobile1x = `${photo.img}-mobile@1x.jpg`;
-      - var mobile2x = `${photo.img}-mobile@2x.jpg 2x`;
-      - var tablet = `${photo.img}-tablet@1x.jpg, ${photo.img}-tablet@2x.jpg 2x`;
-      - var desktop = `${photo.img}-desktop@1x.jpg, ${photo.img}-desktop@2x.jpg 2x`;
+      - var mobile1x = `${data.img}-mobile@1x.jpg`;
+      - var mobile2x = `${data.img}-mobile@2x.jpg 2x`;
+      - var tablet = `${data.img}-tablet@1x.jpg, ${data.img}-tablet@2x.jpg 2x`;
+      - var desktop = `${data.img}-desktop@1x.jpg, ${data.img}-desktop@2x.jpg 2x`;
 
 
       a.photo-card__full-img(href="#")
@@ -16,9 +14,9 @@ mixin photoCard(data)
           img.photo-card__img(src=mobile1x srcset=mobile2x alt="Photo card" width="280" height=180)
 
       .photo-card__wrap
-        span.photo-card__user-name=photo.userName
-        span.photo-card__publication=photo.timePub
-        p.photo-card__desc=photo.desc
+        span.photo-card__user-name=data.userName
+        span.photo-card__publication=data.timePub
+        p.photo-card__desc=data.desc
         .photo-card__like-block
           != pugHelpers.Icon.call(locals, { iconName: "icon-heart", className: 'icon icon--heart'})
-          span.photo-card__like="нравится: " + photo.like
+          span.photo-card__like="нравится: " + data.like
