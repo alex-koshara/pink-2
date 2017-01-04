@@ -7,7 +7,7 @@ html(class="no-js", lang="ru")
     include ../components/photoCard/photoCard.pug
 
     head
-        +head(head.defaults)
+        +head({title: "Фотографии"})
     body.page
         |%=symbols=%
 
@@ -15,7 +15,8 @@ html(class="no-js", lang="ru")
 
             //- Include your components here
             +photoCard({
-                img: "../static/img/content/photo-2",
+                active: "photo-card--active",
+                img: "../static/img/content/panorama",
                 userName: "Левон",
                 timePub: "5 часов назад",
                 desc: "Вчера он на луну летал, сегодня в руки к нам попал.",
