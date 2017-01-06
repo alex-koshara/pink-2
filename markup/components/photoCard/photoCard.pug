@@ -1,3 +1,12 @@
+mixin photoCardWrap(data)
+  .photo-card__wrap
+    span.photo-card__user-name=data.userName
+    span.photo-card__publication=data.timePub
+    p.photo-card__desc=data.desc
+    .photo-card__like-block
+      != pugHelpers.Icon.call(locals, { iconName: "icon-heart", className: 'icon icon--heart'})
+      span.photo-card__like="нравится: " + data.like
+
 mixin photoCard(data)
   section.photo-card(class=data.active)
 
@@ -14,11 +23,10 @@ mixin photoCard(data)
           img.photo-card__img(src=mobile1x srcset=mobile2x alt="Photo card" width="280" height=180)
         if data.active
           span.photo-card__active-text="Панорама дня"
+      if data.active
+        .container
+          +photoCardWrap(data)
+      else
+        +photoCardWrap(data)
 
-      .photo-card__wrap
-        span.photo-card__user-name=data.userName
-        span.photo-card__publication=data.timePub
-        p.photo-card__desc=data.desc
-        .photo-card__like-block
-          != pugHelpers.Icon.call(locals, { iconName: "icon-heart", className: 'icon icon--heart'})
-          span.photo-card__like="нравится: " + data.like
+

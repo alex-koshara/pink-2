@@ -55,12 +55,48 @@
 
 .photo-card__wrap {
   width: 280px;
+  margin: auto;
   padding: 20px;
 
   background: @brownLight;
   @media @tablet-widths {
     width: 300px;
     padding: 24px 14px 23px 27px;
+  }
+}
+
+.photo-card--active .photo-card__wrap {
+  width: 100%;
+  @media @tablet-widths {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.photo-card--active .photo-card__user-name,
+.photo-card--active .photo-card__publication {
+  @media @tablet-widths {
+    order: -2;
+  }
+}
+
+.photo-card--active .photo-card__like-block {
+  @media @tablet-widths {
+    margin-left: auto;
+
+    order: -1;
+  }
+}
+
+.photo-card--active .photo-card__desc {
+  @media @tablet-widths {
+    width: 100%;
+  }
+}
+
+.photo-card--active .photo-card__like {
+  @media @tablet-widths {
+    margin-right: 17px;
   }
 }
 
