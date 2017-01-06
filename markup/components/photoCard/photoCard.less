@@ -1,0 +1,165 @@
+.photo-card {
+  position: relative;
+
+  margin-bottom: 20px;
+  margin-right: 17px;
+  display: inline-block;
+}
+
+.photo-card__full-img {
+  text-decoration: none;
+}
+
+.photo-card__img {
+  bottom: 0;
+
+  display: block;
+  @media @tablet-widths {
+    width: 300px;
+    height: 300px;
+  }
+  @media @desktop-widths {
+    width: 300px;
+    height: 400px;
+  }
+}
+
+.photo-card--active .photo-card__img {
+  width: 100%;
+}
+
+.photo-card__active-text {
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 24px;
+
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 20px;
+
+  display: block;
+
+  width: 140px;
+  padding: 7px 10px 6px;
+
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  color: @white;
+  background: @pink;
+  @media @tablet-widths {
+    top: 55px;
+    right: 40px;
+  }
+}
+
+.photo-card__wrap {
+  width: 280px;
+  padding: 20px;
+
+  background: @brownLight;
+  @media @tablet-widths {
+    width: 300px;
+    padding: 24px 14px 23px 27px;
+  }
+}
+
+.photo-card--active .photo-card__wrap {
+  width: 100%;
+  @media @tablet-widths {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.photo-card--active .photo-card__user-name,
+.photo-card--active .photo-card__publication {
+  @media @tablet-widths {
+    order: -2;
+  }
+}
+
+.photo-card--active .photo-card__like-block {
+  @media @tablet-widths {
+    margin-left: auto;
+
+    order: -1;
+  }
+}
+
+.photo-card--active .photo-card__desc {
+  @media @tablet-widths {
+    width: 100%;
+  }
+}
+
+.photo-card--active .photo-card__like {
+  @media @tablet-widths {
+    margin-right: 17px;
+  }
+}
+
+.photo-card__user-name {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 24px;
+
+  margin-right: 5px;
+
+  color: @primaryColor;
+}
+
+.photo-card__publication {
+  font-size: 12px;
+  font-weight: lighter;
+  line-height: 24px;
+
+  text-transform: uppercase;
+  &::before {
+    content: '(';
+  }
+  &::after {
+    content: ')';
+  }
+}
+
+.photo-card__desc {
+  font-size: 14px;
+  line-height: 24px;
+
+  margin: 0;
+  margin-bottom: 5px;
+  @media @tablet-widths {
+    margin-bottom: 12px;
+  }
+}
+
+.photo-card svg {
+  margin-top: 7px;
+  margin-right: 18px;
+
+  fill: @pink;
+}
+
+.photo-card__like-block {
+  display: flex;
+
+  align-items: flex-start;
+  @media @tablet-widths {
+    justify-content: space-between;
+  }
+}
+
+.photo-card__like {
+  font-size: 12px;
+  line-height: 24px;
+
+  text-transform: uppercase;
+
+  color: @pink;
+  @media @tablet-widths {
+    order: -1;
+  }
+}

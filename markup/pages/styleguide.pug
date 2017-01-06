@@ -8,6 +8,7 @@ html(class="no-js", lang="ru")
     include ../components/footer/footer.pug
     include ../components/btn/btn.pug
     include ../components/textarea/textarea.pug
+    include ../components/photoCard/photoCard.pug
 
 
     head
@@ -108,4 +109,22 @@ html(class="no-js", lang="ru")
               name: "textarea"
             })
 
+            .container
+              +photoCard({
+                img: "../static/img/content/photo-1",
+                userName: "Левон",
+                timePub: "5 часов назад",
+                desc: "Вчера он на луну летал, сегодня в руки к нам попал.",
+                like: "356"
+              })
+
+              +photoCard({
+                img: "../static/img/content/photo-2",
+                userName: "Левон",
+                timePub: "5 часов назад",
+                desc: "Вчера он на луну летал, сегодня в руки к нам попал.",
+                like: "356"
+              })
+
             script(src='%=static=%js/main%=hash=%%=min=%.js')
+
