@@ -18,8 +18,8 @@ mixin photoCard(data)
 
       a.photo-card__full-img(href="#")
         picture
-          source(media="(min-width:1200px)" srcset=desktop)
-          source(media="(min-width:768px)" srcset=tablet)
+          source(media="(min-width:1020px)" srcset=desktop)
+          source(media="(min-width:700px)" srcset=tablet)
           img.photo-card__img(src=mobile1x srcset=mobile2x alt="Photo card" width="280" height=180)
         if data.active
           span.photo-card__active-text="Панорама дня"
