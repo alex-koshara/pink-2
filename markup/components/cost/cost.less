@@ -1,0 +1,125 @@
+.cost {
+  background: @brownLight;
+  @media @mobile-width-only {
+    position: relative;
+    min-height: 280px;
+  }
+}
+
+.cost__table {
+  @media @mobile-width-only {
+    position: absolute;
+    width: 840px;
+    top: 0;
+    left: 0;
+  }
+  @media @tablet-widths {
+    width: 620px;
+    margin: auto;
+  }
+  @media @desktop {
+    width: 940px;
+  }
+}
+
+.cost__table .cost__data {
+  color: @white;
+  position: relative;
+  background: @primaryColor;
+  text-align: center;
+}
+
+.cost__table .cost__empty {
+  display: none;
+  @media @tablet-widths {
+    display: block;
+  }
+  border: none;
+  background: none;
+}
+
+.cost__service {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  @media @tablet-widths {
+    font-size: 16px;
+  }
+  @media @desktop-widths {
+    font-size: 18;
+  }
+}
+
+.cost__price {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: lighter;
+  @media @tablet-widths {
+    font-size: 18px;
+  }
+  @media @desktop-widths {
+    font-size: 24px;
+  }
+}
+
+.cost__table td {
+  border: 2px solid @brownLight;
+  background: @white;
+  @media @mobile-width-only {
+    width: 284px;
+  }
+  @media @tablet-widths {
+    width: 25%;
+  }
+}
+
+.cost__name {
+  font-size: 18px;
+  line-height: 30px;
+  color: @primaryColor;
+  @media @mobile-width-only {
+    display: none;
+  }
+  @media @tablet-widths {
+    font-size: 14px;
+    padding: 15px;
+  }
+  @media @desktop-widths {
+    font-size: 18px;
+  }
+  &.cost__name--mobile {
+    @media @mobile-width-only {
+      display: inline-block;
+    }
+    @media @tablet-widths {
+      display: none;
+    }
+  }
+}
+
+.cost__access {
+  text-align: center;
+  padding: 20px 15px 15px 20px;
+  @media @mobile-width-only {
+    text-align: left;
+  }
+}
+
+.cost__access .icon {
+  @media @mobile-width-only {
+    float: right;
+  }
+}
+
+.icon {
+  &.icon--yes {
+    color: @greenLight;
+    width: 31px;
+    height: 21px;
+  }
+  &.icon--no {
+    color: @orange;
+  }
+}

@@ -8,6 +8,7 @@ html(class="no-js", lang="ru")
     include ../components/footer/footer.pug
     include ../components/btn/btn.pug
     include ../components/textarea/textarea.pug
+    include ../components/cost/cost.pug
 
 
     head
@@ -21,6 +22,8 @@ html(class="no-js", lang="ru")
 
             //- Include your components here
             h1 Styleguide
+
+            +cost()
 
             +checkbox({
               label: "Сделал селфи с акулой",
