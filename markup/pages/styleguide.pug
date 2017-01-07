@@ -8,6 +8,7 @@ html(class="no-js", lang="ru")
     include ../components/footer/footer.pug
     include ../components/btn/btn.pug
     include ../components/textarea/textarea.pug
+    include ../components/logo/logo.pug
 
 
     head
@@ -21,6 +22,14 @@ html(class="no-js", lang="ru")
 
             //- Include your components here
             h1 Styleguide
+
+            +logo({
+              mog: "blue"
+            })
+
+            +logo({
+              link: "index.html"
+            })
 
             +checkbox({
               label: "Сделал селфи с акулой",

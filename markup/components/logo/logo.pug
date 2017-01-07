@@ -1,0 +1,7 @@
+mixin logo(data)
+  a.logo(href= (data.link=="index.html") ? false : "index.html")
+    picture
+      source(media="(min-width:1020px)" srcset=data.mod ? logo.desktopBlue : logo.desktop)
+      source(media="(min-width:700px)" srcset=data.mod ? logo.mobileBlue : logo.tablet)
+      img.logo__img(src="../static/img/svg/logo-pink-white-mobile.svg" alt="Logo" width="146" height="40")
+
