@@ -1,0 +1,43 @@
+mixin icon-access(data)
+  != pugHelpers.Icon.call(locals, { iconName: data.icon ? "icon-yes" : "icon-no", className: data.icon ? "icon icon--yes" : "icon icon--no"})
+
+mixin cost(data)
+    .cost
+      input.cost__input(type="radio" id="cost__input-1" name="cost__toggle")
+      input.cost__input(type="radio" id="cost__input-2" name="cost__toggle")
+      input.cost__input(type="radio" id="cost__input-3" name="cost__toggle")
+      table.cost__table
+        tr
+          td.cost__empty
+          td.cost__data
+            span.cost__service="База"
+            span.cost__price="1,99 USD"
+          td.cost__data.cost__data--hit
+            span.cost__service="Стандарт"
+            span.cost__price="3,99 USD"
+          td.cost__data
+            span.cost__service="Анлим"
+            span.cost__price="9,99 USD"
+        each information in services
+          tr
+            td.cost__name=information.name
+            td.cost__access
+              span.cost__name.cost__name--mobile=information.name
+              +icon-access({
+                icon: information.base
+              })
+            td.cost__access
+              span.cost__name.cost__name--mobile=information.name
+              +icon-access({
+                icon: information.standart
+              })
+            td.cost__access
+              span.cost__name.cost__name--mobile=information.name
+              +icon-access({
+                icon: information.unlim
+              })
+      .cost__wrap
+        label.cost__control(for="cost__input-2")
+        label.cost__control(for="cost__input-1")
+        label.cost__control(for="cost__input-3")
+
