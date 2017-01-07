@@ -3,6 +3,9 @@ mixin icon-access(data)
 
 mixin cost(data)
     .cost
+      input.cost__input(type="radio" id="cost__input-1" name="cost__toggle")
+      input.cost__input(type="radio" id="cost__input-2" name="cost__toggle")
+      input.cost__input(type="radio" id="cost__input-3" name="cost__toggle")
       table.cost__table
         tr
           td.cost__empty
@@ -33,4 +36,8 @@ mixin cost(data)
               +icon-access({
                 icon: information.unlim
               })
+      .cost__wrap
+        label.cost__control(for="cost__input-2")
+        label.cost__control(for="cost__input-1")
+        label.cost__control(for="cost__input-3")
 
