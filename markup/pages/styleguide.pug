@@ -8,6 +8,7 @@ html(class="no-js", lang="ru")
     include ../components/footer/footer.pug
     include ../components/btn/btn.pug
     include ../components/textarea/textarea.pug
+    include ../components/photoFilter/photoFilter.pug
 
 
     head
@@ -106,6 +107,10 @@ html(class="no-js", lang="ru")
               value: "textarea",
               placeholder: "Можно прям в красках",
               name: "textarea"
+            })
+
+            +photoFilter({
+              img: "../static/img/content/photo-7"
             })
 
             script(src='%=static=%js/main%=hash=%%=min=%.js')

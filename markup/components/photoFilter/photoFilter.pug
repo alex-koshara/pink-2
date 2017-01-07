@@ -1,0 +1,27 @@
+mixin rangeControl(data)
+  .range-control
+    .range-control__scale
+      .range-control__bar
+
+mixin photoFunction(data)
+  .photo-function(class=data.class)
+    != pugHelpers.Icon.call(locals, { iconName: data.icon, className: 'icon icon--function'})
+    +rangeControl()
+
+mixin photoFilter(data)
+  section.photo-filter
+
+    - var mobile1x = `${data.img}-mobile@1x.jpg`;
+    - var mobile2x = `${data.img}-mobile@2x.jpg 2x`;
+    - var tablet = `${data.img}-tablet@1x.jpg, ${data.img}-tablet@2x.jpg 2x`;
+    - var desktop = `${data.img}-desktop@1x.jpg, ${data.img}-desktop@2x.jpg 2x`;
+
+    .photo-filter__img
+      picture
+        source(media="(min-width:1020px)" srcset=desktop)
+        source(media="(min-width:700px)" srcset=tablet)
+        img.photo-card__img(src=mobile1x srcset=mobile2x alt="Photo filter" width="280" height="375")
+    .photo-filter__wrap
+      +photoFunction({
+        icon: "icon-editor-crop"
+      })

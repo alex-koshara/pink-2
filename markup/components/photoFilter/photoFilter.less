@@ -1,0 +1,39 @@
+.range-control {
+  width: 240px;
+  margin-bottom: 30px;
+}
+
+.range-control__scale {
+  height: 2px;
+  background: @primaryColor;
+  position: relative;
+}
+
+.range-control__bar {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid @secondaryColor;
+  background: @brownLight;
+  cursor: pointer;
+  &:active {
+    background: @secondaryColor;
+  }
+}
+
+.photo-filter {
+  background: @brownLight;
+  padding: 20px;
+}
+
+.photo-filter__img {
+  margin-bottom: 40px;
+}
+
+.icon.icon--function {
+  color: @secondaryColor;
+}
