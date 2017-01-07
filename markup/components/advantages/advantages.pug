@@ -1,0 +1,33 @@
+mixin advantages(data)
+  .advantages
+    - var mobile1x = `${data.img}-mobile@1x.jpg`;
+    - var mobile2x = `${data.img}-mobile@2x.jpg 2x`;
+    - var tablet = `${data.img}-tablet@1x.jpg, ${data.img}-tablet@2x.jpg 2x`;
+    - var desktop = `${data.img}-desktop@1x.jpg, ${data.img}-desktop@2x.jpg 2x`;
+
+    .advantages__list.container
+      .advantages__item
+        .advantages__name="Поднимает настроение"
+        p.advantages__desc="Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!"
+        picture
+          source(media="(min-width:1020px)" srcset=desktop)
+          source(media="(min-width:700px)" srcset=tablet)
+          img.advantages__img(src=mobile1x srcset=mobile2x alt="Photo card" width="280" height=180)
+
+      .advantages__item
+        .advantages__name="Меняет мир вокруг"
+        p.advantages__desc="Сделай снимок и укрась его смайликом или текстовой подписью чтобы усилить эффект"
+        picture
+          source(media="(min-width:1020px)" srcset=desktop)
+          source(media="(min-width:700px)" srcset=tablet)
+          img.photo-card__img(src=mobile1x srcset=mobile2x alt="Photo card" width="280" height=180)
+
+      .advantages__item
+        .advantages__name="Заводит новых друзей"
+        p.advantages__desc="Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых"
+        picture
+          source(media="(min-width:1020px)" srcset=desktop)
+          source(media="(min-width:700px)" srcset=tablet)
+          img.photo-card__img(src=mobile1x srcset=mobile2x alt="Photo card" width="280" height=180)
+
+
