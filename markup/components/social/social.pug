@@ -1,4 +1,17 @@
+include ../socialLink/socialLink.pug
 mixin social(data)
-    section.social
-      a.social__link(href=data.link)
-        != pugHelpers.Icon.call(locals, { iconName: "icon-" + data.icon, className: 'social__icon'})
+  section.social
+    +socialLink({
+      link: "facebook.com",
+      icon: "facebook"
+    })
+
+    +socialLink({
+      link: "twitter.com",
+      icon: "twitter"
+    })
+
+    +socialLink({
+      link: "youtube.com",
+      icon: "youtube"
+    })
