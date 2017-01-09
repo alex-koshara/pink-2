@@ -8,6 +8,8 @@ html(class="no-js", lang="ru")
     include ../components/footer/footer.pug
     include ../components/btn/btn.pug
     include ../components/textarea/textarea.pug
+    include ../components/social/social.pug
+    include ../components/socialLink/socialLink.pug
 
 
     head
@@ -107,5 +109,21 @@ html(class="no-js", lang="ru")
               placeholder: "Можно прям в красках",
               name: "textarea"
             })
+
+            +social()
+              +socialLink({
+                link: "facebook.com",
+                icon: "facebook"
+              })
+
+              +socialLink({
+                link: "twitter.com",
+                icon: "twitter"
+              })
+
+              +socialLink({
+                link: "youtube.com",
+                icon: "youtube"
+               })
 
             script(src='%=static=%js/main%=hash=%%=min=%.js')

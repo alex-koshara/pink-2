@@ -1,0 +1,3 @@
+mixin socialLink(data)
+  a.social-link(href=data.link)
+    != pugHelpers.Icon.call(locals, { iconName: "icon-" + data.icon, className: 'social-link__icon'})
